@@ -21,13 +21,13 @@
 
 ## Face Mask Image Mining
 
-- Clone this repository `git clone https://github.com/GibranBenitez/FaceMask_Twitter`
-- Update your [Twitter API V2](https://developer.twitter.com/en/docs/twitter-api) Academic Research access level credentials in `/MaskTwitter/credentials.py`
+- Clone this repository `$ git clone https://github.com/GibranBenitez/FaceMask_Twitter.git`
+- Update your [Twitter API V2](https://developer.twitter.com/en/docs/twitter-api) Academic Research access level credentials in `./MaskTwitter/credentials.py`
 - Download the [ConvNeXt weights (190MB)](https://drive.google.com/file/d/172LJwnRH5Kzop5iWyiuHR_oQtEX9O4F1/view?usp=sharing) on `./MaskClassify/weights/`
 - Modify the date range and keywords of faceMaskTwitter.py and demo_covid_classy.py and run these commands. 
 ```bash
-python ./RetinaFace/faceMaskTwitter.py
-python ./MaskClassify/demo_covid_classy.py
+$ python ./RetinaFace/faceMaskTwitter.py
+$ python ./MaskClassify/demo_covid_classy.py
 ```
 
 - Example values for **faceMaskTwitter.py** (keywords and date range):
@@ -57,8 +57,8 @@ keywords = ["n95","ffp2","face mask","cubrebocas","barbijo"]
 
 - We train a ConvNeXt architecture with our preliminary dataset. The results obtained with validation and test sets are **94.8%** and **94.1%**, respectively.
 - To run a classification demo you have to download the [ConvNeXt weights (190MB)](https://drive.google.com/file/d/172LJwnRH5Kzop5iWyiuHR_oQtEX9O4F1/view?usp=sharing) on `./MaskClassify/weights/`
-- Modify the data path `data_dir` and the output folder `out_dir` to run `./MaskClassify/demo_covid_classy.py`
-- Example of modifications for **demo_covid_classy.py** (data_dir, out_dir):
+- Modify the data path `data_dir`, the output folder `out_dir`, and run `$ python ./MaskClassify/demo_covid_classy.py`
+- Example of modifications from **demo_covid_classy.py** (data_dir, includes 10 demo images):
 ```python
 ############## Uncomment this section for demo classy only ################    
 dates = None
